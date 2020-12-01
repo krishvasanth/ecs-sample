@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"D:/Monsoon/ECS/ecs-sample","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}},"virtualbox":{"/home/vagrant/ecs-sample":{"guestpath":"/home/vagrant/ecs-sample","hostpath":"D:/Monsoon/ECS/ecs-sample","disabled":false,"__vagrantfile":true}}}
