@@ -1,11 +1,20 @@
 version: 0.2
 
+env:
+parameter-store:
+DOCKERHUB_USER: /DOCKERHUB_USER
+DOCKERHUB_PASSWORD: /DOCKERHUB_PASSWORD
+
+
+
 phases:
   install:
     runtime-versions:
       docker: 18
   pre_build:
     commands:
+      – echo Logging in to docker hub…
+      – docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
