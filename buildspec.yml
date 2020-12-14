@@ -1,11 +1,9 @@
 version: 0.2
 
 env:
-parameter-store:
-DOCKERHUB_USER: /DOCKERHUB_USER
-DOCKERHUB_PASSWORD: /DOCKERHUB_PASSWORD
-
-
+  parameter-store:
+    DOCKERHUB_USER: /DOCKERHUB_USER
+    DOCKERHUB_PASSWORD: /DOCKERHUB_PASSWORD
 
 phases:
   install:
