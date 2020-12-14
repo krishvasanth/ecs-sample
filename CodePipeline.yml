@@ -18,7 +18,7 @@ Parameters:
     Type: String
   ContainerPort:
     Type: Number
-    Default: 8080
+    Default: 80
 
 Resources:
 
