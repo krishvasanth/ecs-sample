@@ -10,7 +10,7 @@ Parameters:
     Default: krishvasanth
   GithubRepo:
     Type: String
-    Default: Fargate-ECSCluster-Cloudformation
+    Default: ecs-sample
   GithubBranch:
     Type: String
     Default: master
@@ -170,5 +170,5 @@ Resources:
                 RoleArn: 
                   Fn::GetAtt: [ CloudformationExecutionRole, Arn ]
                 StackName: !Join ['-', [!Ref Stage, !Ref 'AWS::AccountId', 'FargateECSCluster']]
-                TemplatePath: source-output-artifacts::Fargate-Cluster.yml
+                TemplatePath: source-output-artifacts::template.yml
             RunOrder: 1
