@@ -10,7 +10,7 @@ Parameters:
     Type: String
     Default: ec2sample
     Description: A name for the service
-  ImageUrl:
+  ImageURI:
     Type: String
     Description: The url of a docker image that contains the application process that
                  will handle the traffic for this service
@@ -70,7 +70,7 @@ Resources:
         - Name: !Ref 'ServiceName'
           Cpu: !Ref 'ContainerCpu'
           Memory: !Ref 'ContainerMemory'
-          Image: !Ref 'ImageUrl'
+          Image: !Ref 'ImageURI'
           PortMappings:
             - ContainerPort: !Ref 'ContainerPort'
 
