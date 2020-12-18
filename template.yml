@@ -101,10 +101,9 @@ Resources:
     Properties: 
       Memory: 1024
       Cpu: 512
-      NetworkMode: host
+      NetworkMode: awsvpc
       RequiresCompatibilities:
         - 'FARGATE'
-        - 'EC2'
       TaskRoleArn: !Ref ExecutionRole
       ExecutionRoleArn: !Ref ExecutionRole
       ContainerDefinitions:
@@ -182,10 +181,10 @@ Resources:
       Cluster: !Ref Cluster
       TaskDefinition: !Ref TaskDefinition
       DesiredCount: 1
-      LaunchType: EC2
+      LaunchType: FARGATE
       NetworkConfiguration: 
         AwsvpcConfiguration:
-          AssignPublicIp: DISABLED
+          AssignPublicIp: ENABLED
           Subnets:
             - !Ref SubnetA
             - !Ref SubnetB
